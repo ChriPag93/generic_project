@@ -1,0 +1,32 @@
+
+.senza-overflow{
+  overflow: auto;
+}
+tr:hover{
+  color: #ef8157;
+  background-color: #dedede4d;
+}
+
+.solo-on-hover:hover{
+  background-color: rgba(239,129,87,0.8);
+  color: white;
+  border: 1px solid #dc3545;
+}
+.solo-on-hover{
+  background-color: lightgrey
+}
+.display-on-hover{
+  display: none;
+
+}
+.solo-on-hover:hover .display-on-hover{
+  display: block;
+  position: absolute;
+  right: 5%;
+  bottom: 22%;
+  font-size: 20px;
+  font-weight: 800;
+}
+.display-on-hover:hover{
+  color: #51cbce;
+}

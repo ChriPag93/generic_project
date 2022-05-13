@@ -1,0 +1,78 @@
+<div class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card card-user">
+        <div class="card-header">
+          <h3 class="card-title">{{form_title}}</h3>
+        </div>
+        <div class="card-body">
+
+            <div class="row" *ngFor="let element of form_data">
+
+
+              <div class="col-md-6 my-2" *ngIf="visibilityVerify(element)">
+
+
+
+                <div *ngIf="element['data_type']==='dropdown'">
+                  <label>{{element['data_name']}}</label>
+                  <br>
+                  <select [(ngModel)]="obj[element['data_name']]" [name]="element['data_name']">
+                    <option *ngFor="let curopt of element['list_choices']" [value]="curopt">
+                      {{curopt}}
+                    </option>
+                  </select>
+                </div>
+
+
+                <div *ngIf="element['data_type']==='text'">
+                  <label>{{element['data_name']}}</label>
+                  <input [(ngModel)]="obj[element['data_name']]" type="text" class="form-control" [placeholder]="element['data_name']">
+                </div>
+
+
+                <div *ngIf="element['data_type']==='number'">
+                  <label>{{element['data_name']}}</label>
+                  <input [(ngModel)]="obj[element['data_name']]" type="number" class="form-control" [placeholder]="element['data_name']">
+                </div>
+
+                <div *ngIf="element['data_type']==='date'">
+                  <label>{{element['data_name']}}</label>
+                  <input [(ngModel)]="obj[element['data_name']]" type="date" class="form-control" [placeholder]="element['data_name']">
+                </div>
+
+
+                <div *ngIf="element['data_type']==='switch'">
+                  <label>{{element['data_name']}}</label>
+                  <label class="form-switch ml-3">
+                    <input [(ngModel)]="obj[element['data_name']]" type="checkbox">
+                    <i></i>
+                  </label>
+                </div>
+
+
+
+                <div *ngIf="element['data_type']==='checkbox'">
+                  <label>{{element['data_name']}}</label>
+                  <input [(ngModel)]="obj[element['data_name']]" type="checkbox" class=" ml-3" [placeholder]="element['data_name']">
+              </div>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div style="width: 100%">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <button class="btn btn-primary btn-circle btn-xl floatRight" (click)="chiamaPost()"><i class="fa fa-check"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "nome": "Pippo spa",
+    "indirizzo": "Viale della Repubblica, 78, Cosenza"
+  },
+  {
+    "id": 2,
+    "nome": "Pippo2 spa",
+    "indirizzo": "Via Repaci, 45, Rende"
+
+  },
+  {
+    "id": 3,
+    "nome": "Pippo3 spa",
+    "indirizzo": "Via della resistenza, 20, Rende"
+  }
+]

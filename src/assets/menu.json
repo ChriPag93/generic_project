@@ -1,0 +1,481 @@
+[
+  {
+    "type": "page",
+    "data": [
+      {
+        "type": "card",
+        "urls_rest":[ "http://192.168.1.66:8080/dummy/card_data/1", "http://192.168.1.66:8080/dummy/card_data/2", "http://192.168.1.66:8080/dummy/card_data/3","http://192.168.1.66:8080/dummy/card_data/8" ]
+      },
+      {
+        "type": "card",
+        "urls_rest":[ "http://192.168.1.66:8080/dummy/card_data/4"]
+      },
+      {
+        "type": "card",
+        "urls_rest": [ "http://192.168.1.66:8080/dummy/card_data/5"]
+      }
+    ],
+    "general_info": {
+      "url": "/pagina",
+      "id": 1,
+      "title": "Dashboard",
+      "icon": "",
+      "class": ""
+    }
+  },
+
+
+  {
+    "type": "page",
+    "data": [
+      {
+        "type": "list",
+        "ref_url": "5",
+        "headers": ["ID", "Nome", "Cognome"],
+        "var_names": ["id", "nome", "cognome"],
+        "url_rest": "http://192.168.1.66:8080/dummy/all_decessi",
+        "data_name": "Decessi"
+      }
+    ],
+    "general_info": {
+      "url": "/pagina",
+      "id": 2,
+      "title": "Lista Decessi",
+      "icon": "",
+      "class": ""
+    }
+  },
+
+
+  {
+    "type": "page",
+    "data": [
+      {
+        "type": "list",
+        "headers": ["ID", "Nome", "Cognome", "Email"],
+        "var_names": ["id", "nome", "cognome", "email"],
+        "url_rest": "http://192.168.1.66:8080/dummy/all_utenti"
+      }
+    ],
+    "general_info": {
+      "url": "/pagina",
+      "id": 3,
+      "title": "Lista Utenti",
+      "icon": "",
+      "class": ""
+    }
+  },
+
+
+  {
+    "type": "page",
+    "data": [
+      {
+        "type": "list",
+        "headers": ["ID", "Nome", "Indirizzo"],
+        "var_names": ["id", "nome", "indirizzo"],
+        "url_rest": "http://192.168.1.66:8080/dummy/all_agenzie"
+      }
+    ],
+    "general_info": {
+      "url": "/pagina",
+      "id": 4,
+      "title": "Lista Agenzie",
+      "icon": "",
+      "class": ""
+    }
+  },
+
+
+  {
+    "in_menu": 0,
+    "type": "page",
+    "data": [
+      {
+        "data_id": "id",
+        "type": "detail",
+        "headers": ["ID", "Nome", "Cognome", "Parenti", "Complessi"],
+        "var_names": ["id", "nome", "cognome", "parenti", "complessi"],
+        "url_rest": "http://192.168.1.66:8080/dummy/decesso"
+      }
+    ],
+    "general_info": {
+      "url": "/pagina",
+      "id": 5,
+      "title": "Decesso",
+      "icon": "",
+      "class": ""
+    }
+  },
+
+
+  {
+    "type": "page",
+    "data": [
+      {
+        "type": "title",
+        "url_rest": "http://192.168.1.66:8080/dummy/titolo_sezione/1"
+      },
+      {
+        "type": "text",
+        "url_rest": "http://192.168.1.66:8080/dummy/testo_sezione/1"
+      },
+      {
+        "type": "image",
+        "url_rest": "http://192.168.1.66:8080/dummy/immagine_sezione/1"
+      },
+      {
+        "type": "title",
+        "url_rest": "http://192.168.1.66:8080/dummy/titolo_sezione/2"
+      },
+      {
+        "type": "text",
+        "url_rest": "http://192.168.1.66:8080/dummy/testo_sezione/2"
+      },
+      {
+        "type": "image",
+        "url_rest": "http://192.168.1.66:8080/dummy/immagine_sezione/2"
+      }
+    ],
+    "general_info": {
+      "url": "/pagina",
+      "id": 6,
+      "title": "Prova components",
+      "icon": "",
+      "class": ""
+    }
+  },
+
+
+
+  {
+    "type": "page",
+    "data": [
+      {
+        "data_id": "id",
+        "form_title": "Form Title",
+        "type": "form",
+        "form_data": [
+          {
+          "data_name": "Icona",
+          "data_type": "dropdown",
+          "list_choices": ["scelta1", "scelta2", "scelta3"]
+          },
+          {
+            "data_name": "Class",
+            "data_type": "dropdown",
+            "list_choices": ["scelta4", "scelta5", "scelta6"]
+          },
+          {
+            "data_name": "Nome",
+            "data_type": "text"
+          },
+          {
+            "data_name": "Numero di uova",
+            "data_type": "number"
+          },
+          {
+            "data_name": "Check",
+            "data_type": "checkbox"
+          },
+          {
+            "data_name": "Switch",
+            "data_type": "switch"
+          },
+          {
+            "data_name": "Data",
+            "data_type": "date"
+          }
+        ]
+      }
+    ],
+    "general_info": {
+      "url": "/pagina",
+      "id": 7,
+      "title": "Form",
+      "icon": "",
+      "class": ""
+    }
+  },
+
+
+
+
+
+
+
+
+  {
+    "query_parameters": ["id", "nome"],
+    "type": "page",
+    "data": [
+      {
+        "type": "list",
+        "ref_url": "10",
+        "headers": ["ID", "Nome"],
+        "var_names": ["id", "nome"],
+        "url_rest": "http://192.168.1.66:8080/softwarator/all_pages",
+        "data_name": "Pagine"
+      },
+      {
+        "type": "button_ref",
+        "ref_url": "9",
+        "data_name": "+"
+      }
+
+    ],
+    "general_info": {
+      "url": "/pagina",
+      "id": 8,
+      "title": "Lista Pagine",
+      "icon": "",
+      "class": ""
+    }
+  },
+
+
+
+  {
+    "type": "page",
+    "in_menu": 0,
+    "data": [
+      {
+        "url_post": "http://192.168.1.66:8080/softwarator/save_page",
+        "type": "form",
+        "form_title": "Add page",
+        "form_data": [
+          {
+            "data_name": "nome",
+            "data_type": "text"
+          },
+          {
+            "data_name": "icona",
+            "data_type": "dropdown",
+            "list_choices": ["icona1", "icona2", "icona3"]
+          },
+          {
+            "data_name": "id",
+            "data_type": "number"
+          },
+          {
+            "data_name": "in_menu",
+            "data_type": "switch"
+          }
+        ]
+      }
+    ],
+    "general_info": {
+      "url": "/pagina",
+      "id": 9,
+      "title": "Dati Pagina",
+      "icon": "",
+      "class": ""
+    }
+  },
+
+
+
+  {
+    "query_parameters": ["id", "nome"],
+    "type": "page",
+    "in_menu": 0,
+    "data": [
+      {
+        "type": "list",
+        "ref_url": "11",
+        "headers": ["ID", "Nome Dato"],
+        "var_names": ["id", "data_name"],
+        "url_rest": "http://192.168.1.66:8080/softwarator/page/{id}",
+        "data_name": "Edit Page"
+      },
+      {
+        "type": "button_ref",
+        "ref_url": "11",
+        "data_name": "+"
+      }
+
+    ],
+    "general_info": {
+      "url": "/pagina",
+      "id": 10,
+      "title": "Edit Page",
+      "icon": "",
+      "class": ""
+    }
+  },
+
+
+  {
+    "type": "page",
+    "in_menu": 0,
+    "data": [
+      {
+        "url_post": "http://192.168.1.66:8080/softwarator/save_data/{id}",
+        "type": "form",
+        "form_title": "Add data",
+        "form_data": [
+          {
+            "id": 1,
+            "data_name": "Data Type",
+            "data_type": "dropdown",
+            "list_choices": ["list", "form", "detail", "card"]
+          },
+          {
+            "id": 2,
+            "data_name": "data_name",
+            "data_type": "text",
+            "visibility": {
+              "ref_id": 1,
+              "ref_value": "list"
+            }
+          },
+          {
+            "id": 3,
+            "data_name": "id",
+            "data_type": "number",
+            "visibility": {
+              "ref_id": 1,
+              "ref_value": "list"
+            }
+          },
+          {
+            "id": 4,
+            "data_name": "headers",
+            "data_type": "text",
+            "visibility": {
+              "ref_id": 1,
+              "ref_value": "list"
+            }
+          },
+          {
+            "id": 5,
+            "data_name": "var_names",
+            "data_type": "text",
+            "visibility": {
+              "ref_id": 1,
+              "ref_value": "list"
+            }
+          },
+          {
+            "id": 6,
+            "data_name": "ref_url",
+            "data_type": "text",
+            "visibility": {
+              "ref_id": 1,
+              "ref_value": "list"
+            }
+          },
+          {
+            "id": 7,
+            "data_name": "url_rest",
+            "data_type": "text",
+            "visibility": {
+              "ref_id": 1,
+              "ref_value": "list"
+            }
+          },
+          {
+            "id": 8,
+            "data_name": "data_name",
+            "data_type": "text",
+            "visibility": {
+              "ref_id": 1,
+              "ref_value": "detail"
+            }
+          },
+          {
+            "id": 9,
+            "data_name": "id",
+            "data_type": "number",
+            "visibility": {
+              "ref_id": 1,
+              "ref_value": "detail"
+            }
+          },
+          {
+            "id": 10,
+            "data_name": "headers",
+            "data_type": "text",
+            "visibility": {
+              "ref_id": 1,
+              "ref_value": "detail"
+            }
+          },
+          {
+            "id": 11,
+            "data_name": "var_names",
+            "data_type": "text",
+            "visibility": {
+              "ref_id": 1,
+              "ref_value": "detail"
+            }
+          },
+          {
+            "id": 12,
+            "data_name": "url_rest",
+            "data_type": "text",
+            "visibility": {
+              "ref_id": 1,
+              "ref_value": "detail"
+            }
+          },
+          {
+            "id": 13,
+            "data_name": "url_post",
+            "data_type": "text",
+            "visibility": {
+              "ref_id": 1,
+              "ref_value": "detail"
+            }
+          },
+          {
+            "id": 14,
+            "data_name": "data_name",
+            "data_type": "text",
+            "visibility": {
+              "ref_id": 1,
+              "ref_value": "card"
+            }
+          },
+          {
+            "id": 15,
+            "data_name": "id",
+            "data_type": "number",
+            "visibility": {
+              "ref_id": 1,
+              "ref_value": "card"
+            }
+          },
+          {
+            "id": 16,
+            "data_name": "data_value",
+            "data_type": "text",
+            "visibility": {
+              "ref_id": 1,
+              "ref_value": "card"
+            }
+          },
+          {
+            "id": 17,
+            "data_name": "data_icon",
+            "data_type": "text",
+            "visibility": {
+              "ref_id": 1,
+              "ref_value": "card"
+            }
+          }
+
+
+        ]
+      }
+    ],
+    "general_info": {
+      "url": "/pagina",
+      "id": 11,
+      "title": "Edit",
+      "icon": "",
+
+      "class": ""
+    }
+  }
+]

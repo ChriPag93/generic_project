@@ -1,0 +1,13 @@
+
+<div *ngFor="let component of components">
+  <app-list *ngIf="component['type']==='list'" [indice]="component.indice" [urlrest]="component.url" [indicedati]="component.indicedati"></app-list>
+  <app-detail *ngIf="component['type']==='detail'" [indice]="component.indice" [indicedati]="component.indicedati"></app-detail>
+  <app-text *ngIf="component['type']==='text'" [indice]="component.indice" [urlrest]="component.url" [indicedati]="component.indicedati"></app-text>
+  <app-image *ngIf="component['type']==='image'" [indice]="component.indice" [urlrest]="component.url" [indicedati]="component.indicedati"></app-image>
+  <app-card *ngIf="component['type']==='card'" [indice]="component.indice" [indicedati]="component.indicedati"></app-card>
+  <app-form *ngIf="component['type']==='form'" [indice]="component.indice" [indicedati]="component.indicedati"></app-form>
+  <app-buttonref *ngIf="component['type']==='button_ref'" [indice]="component.indice" [indicedati]="component.indicedati"></app-buttonref>
+  <app-title *ngIf="component['type']==='title'" [indice]="component.indice" [urlrest]="component.url" [indicedati]="component.indicedati"></app-title>
+</div>
+
+

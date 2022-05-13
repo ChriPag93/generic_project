@@ -1,0 +1,98 @@
+<div class="content">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card card-user">
+        <div class="card-header">
+          <h3 class="card-title">Titolo prova</h3>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col-md-8 pr-1 pl-1">
+                <div class="form-group">
+                  <label for="add">Aggiungi tag</label>
+                  <input id="add" [(ngModel)]="input" type="text" class="form-control" name="add" placeholder="Add tag">
+                </div>
+              </div>
+              <div class="col-md-4 pr-1 pl-1">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label style="color: transparent" for="butt">.</label>
+                      <input type="button" id="butt" class=" btn-primary btn-round form-control" value="Add" (click)="addTag()">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <br>
+          <br>
+          <div class="row" >
+            <div class="col-md-3 pr-1 pl-1" *ngFor="let elem of listatag">
+             <div class="form-group">
+               <button  class="solo-on-hover btn-round form-control" >
+                 {{elem}}
+                 <i (click)="deleteTag(elem)" class="nc-icon nc-simple-remove display-on-hover "></i>
+               </button>
+             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card card-user">
+        <div class="card-header">
+          <h3 class="card-title">Tot. Invalidità</h3>
+        </div>
+        <div class="card-body">
+          <app-carrello [(data)]="carrello"></app-carrello>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> Tag Table</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive senza-overflow">
+            <table class="table">
+              <thead>
+               <th></th>
+               <th></th>
+               <th></th>
+               <th></th>
+               <th></th>
+               <th></th>
+               <th></th>
+               <th></th>
+               <th>% invalidità</th>
+               <th></th>
+               <th></th>
+               <th></th>
+               <th></th>
+               <th></th>
+              </thead>
+
+              <tbody *ngIf="lista?.length!=0">
+              <tr (click)="carrello.push(contattocorrente); stampa(contattocorrente)" *ngFor="let contattocorrente of lista;">
+                <td *ngFor="let element of contattocorrente;">{{element}}</td>
+              </tr>
+              </tbody>
+              <tbody *ngIf="lista?.length==0">
+              <h1>No data</h1>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

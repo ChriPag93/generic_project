@@ -1,0 +1,25 @@
+.senza-overflow{
+  overflow: auto;
+}
+tr:hover{
+  color: #ef8157;
+  background-color: #dedede4d;
+}
+.ingrassato{
+  font-size: 20px;
+  font-weight: 900;
+}
+.input-lista{
+  border: none;
+  background: transparent;
+  width: 100%;
+  cursor: pointer;
+}
+.input-lista:focus{
+  cursor: text;
+}
+.selected-row {
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+}

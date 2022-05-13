@@ -1,0 +1,7 @@
+.senza-overflow{
+  overflow: auto;
+}
+tr:hover{
+   color: #ef8157;
+   background-color: #dedede4d;
+ }

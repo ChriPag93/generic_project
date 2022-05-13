@@ -1,0 +1,48 @@
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title"> {{data_name}} </h3>
+          <h5 class=" card-title">{{list.length}}</h5>
+        </div>
+        <div class="card-body">
+
+
+          <div class="table-responsive senza-overflow">
+            <table class="table">
+              <thead class=" text-primary">
+              <th *ngFor=" let header of headers">
+                {{header}}
+              </th>
+              </thead>
+              <tbody *ngIf="list?.length!=0">
+
+              <ng-template [ngIf]="ref_url !== undefined && ref_url !== 'default'" [ngIfElse]="elseblock">
+                <tr  [routerLink]="['/pagina',ref_url]" [queryParams]="checkQueryParams(data)" *ngFor="let data of list">
+                  <td role="button" *ngFor="let var_name of var_names">
+                    {{data[var_name]}}
+                  </td>
+                </tr>
+              </ng-template>
+
+              <ng-template  #elseblock>
+                <tr *ngFor="let data of list">
+                  <td role="button" *ngFor="let var_name of var_names">
+                    {{data[var_name]}}
+                  </td>
+                </tr>
+              </ng-template>
+
+              </tbody>
+              <tbody *ngIf="list?.length==0">
+              <h1>No data</h1>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+

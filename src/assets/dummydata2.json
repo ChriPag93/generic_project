@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nome": "Pippo",
+    "cognome": "Pluto",
+    "email": "pp@gmail.com"
+  },
+  {
+  "id": 2,
+  "nome": "Pippo2",
+  "cognome": "Pluto2",
+  "email": "pp2@gmail.com"
+  },
+  {
+  "id": 3,
+  "nome": "Pippo3",
+  "cognome": "Pluto3",
+  "email": "pp3@gmail.com"
+  }
+]

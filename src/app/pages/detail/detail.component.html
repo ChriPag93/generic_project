@@ -1,0 +1,40 @@
+<div class="content">
+    <div class="row">
+    <div class="col-md-12">
+      <div class="card card-user">
+        <div class="card-header">
+          <h5 class="card-title">{{title}}</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+
+
+              <div *ngFor="let element of var_names; index as i" class="col-md-6">
+                <div *ngIf="!typeOf(obj[element])" class="form-group">
+                  <label>{{headers[i]}}</label>
+                  <input [(ngModel)]="obj[element]" type="text" class="form-control" placeholder="">
+                </div>
+              </div>
+              <div *ngFor="let element of var_names; index as i" class="col-md-12">
+                <div *ngIf="typeOf(obj[element])" class="form-group">
+                  <app-fakelist (dataChange)="obj[element]=$event" [data]="obj[element]" [title]="headers[i]"></app-fakelist>
+                </div>
+              </div>
+
+            </div>
+            <br>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+  <div style="width: 100%">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <button class="btn btn-primary btn-circle btn-xl floatRight" (click)="submit()"><i class="fa fa-check"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

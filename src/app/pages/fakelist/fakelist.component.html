@@ -1,0 +1,46 @@
+
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title"> {{title}} </h3>
+          <h5 class=" card-title">{{data.length}}</h5>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive senza-overflow">
+            <table class="table">
+              <thead class=" text-primary">
+              <th *ngFor=" let header of headers">
+                {{header}}
+              </th>
+              </thead>
+              <tbody *ngIf="data?.length!=0">
+
+                <tr *ngFor="let dato of data; index as i">
+                  <td role="button" *ngFor="let var_name of headers">
+                    <div *ngIf="var_name !== 'delete' && var_name !== 'edit'">
+                      <input [ngClass]="editing[i] ? 'selected-row': '' " type="text" [disabled]="!editing[i]" [(ngModel)]="dato[var_name]" class="input-lista">
+                    </div>
+                    <div *ngIf="var_name === 'delete'" class="icon-big text-center icon-warning">
+                      <i role="button" (click)="delete(dato)" class="nc-icon nc-simple-remove text-danger ingrassato"></i>
+                    </div>
+                    <div *ngIf="var_name === 'edit'" class="icon-big text-center icon-warning">
+
+
+                      <i  *ngIf="!editing[i]" role="button" (click)="editSelected(i)" class="nc-icon nc-settings-gear-65 text-primary ingrassato"></i>
+                      <i  *ngIf="editing[i]" role="button" (click)="editSelected(i)" class="nc-icon nc-check-2 text-success ingrassato"></i>
+
+
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+              <tbody *ngIf="data?.length==0">
+              <h1>No data</h1>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
